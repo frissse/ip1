@@ -1,0 +1,80 @@
+#!/bin/bash
+# these are the default setting but you can change as you wish
+# but make sure to file in the URL of the domain name you want to use & the GIT_TOKEN for the gitlab repo
+# when you are done with the changes, please copy this file and rename to config.sh, othwerwise the script will not work
+
+# project level parameters
+CLOUDFLARE_API_TOKEN="enter cloudflare API here" # Cloudflare API token
+CLOUDFLARE_ZONE_ID="enter cloudflare zone id here" # Cloudflare zone id
+LIB_DIR="lib"
+PROJECT_NAME="enter project name here"
+BILLING_ACCOUNT_ID="enter billing account id here"
+REGION="europe-central2"
+GIT_DIRECTORY="pm"
+GIT_TOKEN="enter git token here"
+GIT_URL="https://oauth2:$GIT_TOKEN@gitlab.com/kdg-ti/integratieproject-1/202324/8_mf_i/dotnet.git"
+NETWORK_NAME="phygital-network"
+SUBNET_NAME="phygital-network-subnet"
+ALLOCATED_IP_RANGE_NAME="phygital-allocated-ip-range"
+PRIVATE_ACCESS="phygital-private-access-1"
+REGION="europe-central2"
+ZONE="europe-central2-c"
+ZONE_2="europe-central2-a"
+ZONE_3="europe-central2-b"
+
+BUCKET_NAME="$PROJECT_NAME-bucket"
+
+DOMAIN_NAME="enter domain name here"
+
+FW_ALLOW_PORT_5000="allow-port-5000"
+
+DATABASE_NAME_PRIVATE="phygital-database-private"
+DATABASE_INSTANCE_NAME="phygital-database"
+
+SECRETS_NAME="phygital-secrets"
+
+#instance level parameters
+BASIC_TEMPLATE_NAME="basic-template"
+PERFORMANT_TEMPLATE_NAME="performant-template"
+STORAGE_TEMPLATE_NAME="storage-template"
+INSTANCE_NAME="phygital-instance"
+MACHINE_TYPE="n1-standard-4"
+IMAGE="projects/debian-cloud/global/images/debian-12-bookworm-v20240415"
+
+#database
+ASPNETCORE_DEV_ENVIRONMENT="Production"
+ASPNETCORE_DEV_DATABASE_PASSWORD="Password123!"
+ASPNETCORE_DEV_DATABASE_NAME="phygital-database-production"
+ASPNETCORE_DEV_DATABASE_USER="postgres"
+ASPNETCORE_DEV_DATABASE_PORT="5432"
+
+REDIS_INSTANCE_NAME="phygital-redis"
+
+#load balancer
+SSL_CERTIFICATE="phygital-ssl-certificate"
+
+INSTANCE_GROUP="phygital-1"
+INSTANCE_GROUP_SIZE=2
+INSTANCE_GROUP_MAX_REPLICAS=5
+
+INSTANCE_GROUP_TARGET_CPU_UTIL=0.80
+
+FW_HEALTH_CHECK="fw-allow-health-check"
+FW_SSH="allow-ssh-phygital"
+FW_REDIS="allow-redis-6379"
+
+LB_STATIC_IP_NAME="phygital-ipv4-1"
+
+HEALTH_CHECK="phygital-health-check"
+HEALTH_CHECK_INTERVAL=15
+HEALTH_CHECK_TIMEOUT=15
+
+LB_BACKEND="phygital-backend"
+
+URL_MAP="phygital-map-https"
+
+PROXY="phygital-proxy"
+PROXY_HTTPS="phygital-proxy-https"
+
+FORWARDING_RULE_HTTP="phygital-forwarding-http"
+FORWARDING_RULE_HTTPS="phygital-forwarding-https"

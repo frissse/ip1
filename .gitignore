@@ -1,0 +1,13 @@
+/PodcastManagement/*
+/appEngine/*.pem 
+phygitalSSH.pub
+phygitalSSH
+.DS_Store
+appEngine/*.yaml
+computeEngine/google-cloud-sdk/
+computeEngine/app/
+computeEngine/config.sh
+computeEngine/env-var
+computeEngine/env-var.txt
+computeEngine_backup.zip
+computeEngine/logs/
